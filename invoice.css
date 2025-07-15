@@ -1,0 +1,302 @@
+
+#blue{
+
+background-color: burlywood;
+
+height: 570px;
+
+width: 1240px;
+
+background-repeat: no-repeat;
+
+}
+
+#text
+
+{
+
+color: black;
+
+font-size: 40px;
+
+font-weight: 800;
+
+text-align: center;
+
+padding-top: 20px;
+
+}
+
+#mySelect
+
+{
+
+    margin-top: 20px;
+
+    margin-left: 100px;
+
+    padding: 15px; 
+
+    width: 1000px;
+
+}
+
+#flex
+
+{
+
+ 
+
+    margin-left: 100px;
+
+    width: 1000px;
+
+    margin-top: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+   
+
+}
+
+#cl{
+
+   font-size: 20px;
+
+   font-weight: 600;
+
+
+
+   width: 200px;
+
+}
+
+#cll{
+
+   font-size: 20px;
+
+   font-weight: 600;
+
+
+
+ width: 200px;
+
+}
+
+#clll{
+
+   font-size: 20px;
+
+   font-weight: 600;
+
+ 
+
+   width: 200px;
+
+}
+
+
+
+#flexx{
+
+    margin-left: 100px;
+
+
+
+    margin-top: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+
+
+}
+
+#it{
+
+    display: flex;
+
+    height: 30px;
+
+    width: 1000px;
+
+    margin-top:30px;
+
+    margin-left: 100px;
+
+
+
+}
+
+
+
+
+
+.items{
+
+    width: 200px;
+
+
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+   padding-left: 40px;
+
+}
+
+#hh{
+
+   
+
+
+
+   
+
+    width: 1000px;
+
+    margin-top:30px;
+
+    margin-left: 100px;
+
+display: flex;
+
+
+
+}
+
+#tot{
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    margin-left: 900px;
+
+
+
+}
+
+#dd{
+
+    padding: 5px; 
+
+     width: 1000px;
+
+      height: 40px;
+
+       color:white;
+
+        background-color: black;
+
+         font-size: 20px; 
+
+         font-weight: 900;
+
+}
+
+.ee{
+
+    width: 190px; 
+
+     height: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+.dropbtn {
+
+  background-color: #4CAF50;
+
+  color: white;
+
+  padding: 16px;
+
+  font-size: 16px;
+
+  border: none;
+
+  cursor: pointer;
+
+}
+
+
+
+.dropdown {
+
+  position: relative;
+
+  display: inline-block;
+
+}
+
+
+
+.dropdown-content {
+
+  display: none;
+
+  position: absolute;
+
+  right: 0;
+
+  background-color: #f9f9f9;
+
+  min-width: 160px;
+
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  z-index: 1;
+
+}
+
+
+
+.dropdown-content a {
+
+  color: black;
+
+  padding: 12px 16px;
+
+  text-decoration: none;
+
+  display: block;
+
+}
+
+
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+
+
+.dropdown:hover .dropdown-content {
+
+  display: block;
+
+}
+
+
+
+.dropdown:hover .dropbtn {
+
+  background-color: #3e8e41;
+
+}

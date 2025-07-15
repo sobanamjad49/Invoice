@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+<link rel="stylesheet" href="invoice.css">
+
+
+
+</head>
+
+<body>
+
+    
+
+<div  id="blue">
+
+
+
+<div id="text">
+
+INVOICE SLIP MAKER
+
+</div>
+
+<br>
+
+<div style="background-color: red; height:4px; width: 1000px; margin-left: 100px;">
+
+
+
+</div>
+
+
+
+  
+
+ <div class="dropdown" style="float:left;  " >
+
+    <button class="dropbtn"   style="width: 200px;  margin-left: 100px; margin-top: 20px;">SELECT ITEMS</button>
+
+    <div class="dropdown-content" style="left:100px;  cursor: pointer; ;">
+
+   <div     onclick="click1()" id="itrem"  >Coffee</div>
+
+   <div  onclick="click2()" >CocaCola</div>
+
+   <div onclick="click3()">7up</div>
+
+   </div>
+
+   </div> 
+
+
+
+
+
+
+
+<br><br><br>
+
+<div id="flex"  >
+
+    <div id="cl"  >item</div>
+
+<div id="cl"  >Price</div>
+
+
+
+<div id="cll" >Quatity</div>
+
+<div id="clll" >Amount</div>
+
+</div>
+
+
+
+
+
+<div id="flexx"  >
+
+ <div style="width: 200px; " id="coff"><input type="text" ></div>
+
+ <div style="width: 200px;margin-left: 60px; " id="coff1" ><input type="text" ></div>
+
+ <div style="width: 200px;margin-left: 60px ;" id="coff2" ><input  oninput="ww()" id="ii" type="number" ></div>
+
+ <div style="width: 200px;margin-left: 60px;" id="coff3"><input type="text" ></div>
+
+ <div style="width: 50px; margin-left: 2px; ;"><button style="width: 50px; height: 25px;"  onclick="btn1()">Add</button></div>
+
+    </div>
+
+
+
+    <br>
+
+    <div style="background-color: blue; height:4px; width: 1000px; margin-left: 100px;"></div>
+
+    
+
+
+
+<div id="it">
+
+<div class="items"  >Sr.no.</div>
+
+<div class="items">Product</div>
+
+<div class="items">Price</div>
+
+<div class="items">Qunatity</div>
+
+<div class="items">Amount</div>
+
+</div>
+
+
+
+
+
+<!-- add product in this product list  -->
+
+<div id="product-list" style="width: 1000px; margin-left: 100px;"></div>
+
+
+
+
+
+<div id="tot" style=" display: flex; height: 30px; width: 250px; ">
+
+    <div  style=" height: 30px; width: 150px;">Total Amount =</div>
+
+    <div style=" height: 30px; width: 100px;" id="sty"></div>
+
+</div>
+
+
+
+<div >
+
+    <button style="margin-top: 10px; margin-left: 100px;" onclick="printInvoice()">Print</button>
+
+</div>
+
+
+
+ </div>
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+<script>
+
+ 
+
+
+
+ let totalAmount = 0;
+
+    let serial = 0;
+
+
+
+    function click1() {
+
+        document.getElementById('coff').innerHTML = '<input type="text" value="Coffee">';
+
+        document.getElementById('coff1').innerHTML = '<input type="text" value="220">';
+
+        document.getElementById('ii').value = 1;
+
+        document.getElementById('coff3').innerHTML = '<input type="text" value="220">';
+
+    }
+
+
+
+    function click2() {
+
+        document.getElementById('coff').innerHTML = '<input type="text" value="CocaCola">';
+
+        document.getElementById('coff1').innerHTML = '<input type="text" value="100">';
+
+        document.getElementById('ii').value = 1;
+
+        document.getElementById('coff3').innerHTML = '<input type="text" value="100">';
+
+    }
+
+
+
+    function click3() {
+
+        document.getElementById('coff').innerHTML = '<input type="text" value="7up">';
+
+        document.getElementById('coff1').innerHTML = '<input type="text" value="80">';
+
+        document.getElementById('ii').value = 1;
+
+        document.getElementById('coff3').innerHTML = '<input type="text" value="80">';
+
+    }
+
+
+
+    function ww() {
+
+        const price = parseFloat(document.getElementById('coff1').querySelector('input').value);
+
+        const quantity = parseFloat(document.getElementById('ii').value);
+
+        const amount = document.getElementById('coff3');
+
+        amount.innerHTML = `<input type="text" value="${price * quantity}">;`
+
+    }
+
+
+
+    function btn1() {
+
+        const product = document.getElementById('coff').querySelector('input').value;
+
+        const price = parseFloat(document.getElementById('coff1').querySelector('input').value);
+
+        const quantity = parseInt(document.getElementById('ii').value);
+
+        const amount = parseFloat(document.getElementById('coff3').querySelector('input').value);
+
+
+
+        serial++;
+
+        totalAmount += amount;
+
+
+
+        const productList = document.getElementById('product-list');
+
+        const row = document.createElement('div');
+
+        row.style.display = 'flex';
+
+        row.style.border = '1px solid black';
+
+        row.innerHTML = `
+
+            <div style="width: 200px; padding-left: 40px;">${serial}</div>
+
+            <div style="width: 200px; padding-left: 40px;">${product}</div>
+
+            <div style="width: 200px; padding-left: 40px;">${price}</div>
+
+            <div style="width: 200px; padding-left: 40px;">${quantity}</div>
+
+            <div style="width: 200px; padding-left: 40px;">${amount}</div>
+
+        `;
+
+        productList.appendChild(row);
+
+
+
+        document.getElementById('sty').innerText = totalAmount;
+
+    }
+
+
+
+    function printInvoice() {
+
+window.print();
+
+}
+
+
+
+
+
+
+
+
+ 
+
+
+
+     
+
+     </script>
+
+     </body>
+
+     </html>
